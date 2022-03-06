@@ -39,6 +39,16 @@ MainWindowCallback(HWND Window,
 			OutputDebubStringA("WM_ACTIVEAPP\n");
 		} break;
 
+		case WM_PAINT:
+		{
+			PAINTSTRUCT Paint;
+			HDC DeviceContext = BeginPaint(Window, &Paint);
+			\
+			PatBlt(DeviceContect, WHITENESS);
+			Paint.rcPaint;
+			EndPaint(Window, &Paint);
+		} break;
+
 		default
 		{
 //			OutputDebubStringA("default\n");
