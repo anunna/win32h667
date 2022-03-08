@@ -21,22 +21,22 @@ MainWindowCallback(HWND Window,
 	{
 		case WM_SIZE:
 		{
-			OutputDebubStringA("WM_SIZE\n");
+			OutputDebugStringA("WM_SIZE\n");
 		} break;
 
 		case WM_DESTROY:
 		{
-			OutputDebubStringA("WM_DESTROY\n");
+			OutputDebugStringA("WM_DESTROY\n");
 		} break;
 
 		case WM_CLOSE:
 		{
-			OutputDebubStringA("WM_CLOSE\n");
+			OutputDebugStringA("WM_CLOSE\n");
 		} break;
 
 		case WM_ACTIVEAPP:
 		{
-			OutputDebubStringA("WM_ACTIVEAPP\n");
+			OutputDebugStringA("WM_ACTIVEAPP\n");
 		} break;
 
 		case WM_PAINT:
@@ -51,7 +51,7 @@ MainWindowCallback(HWND Window,
 
 		default
 		{
-//			OutputDebubStringA("default\n");
+//			OutputDebugStringA("default\n");
 			Result = DefWindowProc(Window, Message, WParam, LParam);
 		} break;
 	}
