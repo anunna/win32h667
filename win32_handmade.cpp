@@ -31,6 +31,7 @@ MainWindowCallback(HWND Window,
 
 		case WM_CLOSE:
 		{
+			PostQuitMessage(0);
 			OutputDebugStringA("WM_CLOSE\n");
 		} break;
 
@@ -70,13 +71,12 @@ WinMain(HINSTANCE Instance,
 	WNDCLASS WindowClass = {};
 
 	// TODO(anunna): Check if HREDRAW/VREDRAW/OWNDC still matter
-	WindowClass.style = CS_OWNDC|CS_HREDRAW|CS_VREDRAW;
 	WindowClass.lpfnWndProc = MainWindowCallback;
 	WindowClass.hInstance = Instance;
 //	WindowClass.hIcon;
 	WindowClass.lpszClassName = "HandmadeHeroWndowClass";
 	
-	if (RegisterClass(&WindowClass))
+	if(RegisterClassA(&WindowClass))
 	{
 		HWND WindowHandle =
 			CreateWindowExA(
