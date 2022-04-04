@@ -176,7 +176,7 @@ WinMain(HINSTANCE Instance,
 {
 	WNDCLASS WindowClass = {};
 
-	// TODO(anunna): Check if HREDRAW/VREDRAW/OWNDC still matter
+	WindowClass.style = CS_HREDRAW|CS_VREDRAW;
 	WindowClass.lpfnWndProc = Win32MainWindowCallback;
 	WindowClass.hInstance = Instance;
 //	WindowClass.hIcon;
