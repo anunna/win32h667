@@ -180,7 +180,7 @@ WinMain(HINSTANCE Instance,
 	WindowClass.lpfnWndProc = Win32MainWindowCallback;
 	WindowClass.hInstance = Instance;
 //	WindowClass.hIcon;
-	WindowClass.lpszClassName = "HandmadeHeroWndowClass";
+	WindowClass.lpszClassName = "HandmadeHeroWindowClass";
 	
 	if(RegisterClassA(&WindowClass))
 	{
